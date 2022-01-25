@@ -7,9 +7,7 @@ import Home2 from "./components/Home2"
 import Home3 from "./components/Home3"
 import { BrowserRouter as Router, Switch, Route} from "react-router-dom"
 import Checkout from './components/Checkout';
-import User_info from "./components/User_Info";
-import Password_retreive from "./components/Password_retreive"
-import { CookiesProvider} from "react-cookie"
+import Userinfo from "./components/User_Info";
 import Pagination from "./components/Pagination";
 import Bootstrap from "./components/Bootstrap";
 function App() {
@@ -23,7 +21,7 @@ function App() {
                 <Bootstrap />
               </Route>
               <Route exact path = "/payment_platform">
-                <User_info />
+                <Userinfo />
               </Route>
               <Route exact path="/">
               <Header />

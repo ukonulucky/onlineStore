@@ -1,14 +1,6 @@
 import React from 'react'
 import "../styles/Home.css"
 import Product from "./Product"
-// import shoeImage from "../utils/images/shoe.jpg"
-// import fridge from "../utils/images/fridge.jpeg"
-// import furniture from "../utils/images/furniture.jpg"
-// import hair from "../utils/images/hairImage.jpeg"
-// import Tv from "../utils/images/LgTv.jpeg"
-// import kitchen from "../utils/images/kitchen.jpeg"
-// import sound from "../utils/images/soundimage.jpeg"
-// import shirt from "../utils/images/t-shirt.jpeg"
 import shoeImage from "../utils/images/pic1.jpg"
 import fridge from "../utils/images/pic3.jpg"
 import furniture from "../utils/images/pic4.jpg"
@@ -19,7 +11,6 @@ import sound from "../utils/images/pic8.jpg"
 import pic11 from "../utils/images/pic11.jpg"
 import shirt from "../utils/images/pic9.jpg"
 import bgPic from "../utils/images/large-1.jpg"
-import { Link } from "react-router-dom"
 function Home() {
     return (
         <div className="home">

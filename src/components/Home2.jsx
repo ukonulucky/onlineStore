@@ -10,7 +10,6 @@ import kitchen from "../utils/images/pg17.jpg"
 import sound from "../utils/images/pg18.jpg"
 import shirt from "../utils/images/pg19.jpg"
 import bgPic from "../utils/images/large-1.jpg"
-import { Link } from "react-router-dom"
 function Home2() {
     return (
         <div className="home">

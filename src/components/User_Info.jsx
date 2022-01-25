@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { useHistory} from "react-router-dom";
 import "../styles/User_info.css";
 import axios from "axios"
-function Bootstrap() {
+function Userinfo() {
   const [loginData, setloginData] = useState({
     cardName: "",
     cardNumber: "",
@@ -126,4 +126,4 @@ const res = await axios.post("http://localhost:5000/user_paymen")
   );
 }
 
-export default Bootstrap;
+export default Userinfo;

@@ -8,7 +8,6 @@ import hair from "../utils/images/pg23.jpg"
 import Tv from "../utils/images/pg24.jpg"
 import kitchen from "../utils/images/pg25.jpg"
 import bgPic from "../utils/images/large-1.jpg"
-import { Link } from "react-router-dom"
 function Home3() {
     return (
         <div className="home">
