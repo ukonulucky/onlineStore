@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,KAAK,CAAA;EACD,KAAK,EAAE,kBAAkB;EACzB,OAAO,EAAE,IAAI;EACb,eAAe,EAAE,MAAM;CAO1B;;AAVD,AAII,KAJC,CAID,QAAQ,CAAA;EACJ,KAAK,EAAE,kBAAkB;CAC5B;;AANL,AAOI,KAPC,CAOD,GAAG,CAAA;EACC,KAAK,EAAE,kBAAkB;CAC5B",
+    "sources": [
+        "Pagination.scss"
+    ],
+    "names": [],
+    "file": "Pagination.css"
+}

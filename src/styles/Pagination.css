@@ -1,0 +1,18 @@
+.page {
+  color: #cd9042 !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.page .example {
+  color: #cd9042 !important;
+}
+
+.page nav {
+  color: #cd9042 !important;
+}
+/*# sourceMappingURL=Pagination.css.map */
