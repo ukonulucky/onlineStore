@@ -4,15 +4,7 @@ import "../styles/Checkout.css"
 import Subtotal from './Subtotal'
 import logo from "../utils/images/logo.jpg"
 import Product2 from './Product2'
-import shoeImage from "../utils/images/shoe.jpg"
-import fridge from "../utils/images/fridge.jpeg"
-import furniture from "../utils/images/furniture.jpg"
-import hair from "../utils/images/hairImage.jpeg"
-import Tv from "../utils/images/LgTv.jpeg"
-import kitchen from "../utils/images/kitchen.jpeg"
-import sound from "../utils/images/soundimage.jpeg"
-import shirt from "../utils/images/t-shirt.jpeg"
-import bgPic from "../utils/images/large-1.jpg"
+
 
 function Checkout() {
     

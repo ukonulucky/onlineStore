@@ -1,8 +1,7 @@
 import React, { useState } from "react";
-import logo from "../utils/images/logo.jpg";
-import { Link, useHistory} from "react-router-dom";
+// import logo from "../utils/images/logo.jpg";
+import { useHistory} from "react-router-dom";
 import "../styles/User_info.css";
-import States from "./States";
 import axios from "axios"
 function Bootstrap() {
   const [loginData, setloginData] = useState({
@@ -23,7 +22,8 @@ const res = await axios.post("http://localhost:5000/user_paymen")
       if (res.status === 201) {
      const Timeout = setTimeout( () => {
           alert("Form Submission Successful")
-        }, 5000);
+     }, 5000);
+        Timeout()
       } else {
         setForm_status({state:"Form Submission Failed Please Retry"})
     }
@@ -31,7 +31,6 @@ const res = await axios.post("http://localhost:5000/user_paymen")
       console.log(err)
        history.push("/payment_platform")
       setForm_status({ state: "Form Submission Failed Please Retry" })
-      
     }
   }
   const handleSubmit = (e) => {
