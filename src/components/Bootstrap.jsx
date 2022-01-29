@@ -107,13 +107,13 @@ function Bootstrap() {
             </div>
           </div>
           <div class="form-row">
-            <div className="one">
-              <div class="col-md-6 mb-3">
+            <div className="one state_count">
+              <div class="col-md-6 mb-3 count">
                 <label for="validationTooltip04">Country</label>
                 <Countries loginData={ loginData } loginData1={ loginData.country } setloginData={ setloginData } />
                 <div class="invalid-tooltip">Please provide a valid state.</div>
               </div>
-              <div class="col-md-5 mb-3 ">
+              <div class="col-md-5 mb-3  state">
                 <label for="validationTooltip04">State</label>
                 <States loginData ={ loginData } setloginData={ setloginData }/>
                 <div class="invalid-tooltip">Please provide a valid state.</div>

@@ -40,7 +40,7 @@ function Product2({ title, rating, price, description, image,comment, id }) {
                      { return (<span key={ i } className="star"><StarIcon  /> </span>)})
                     }
                 </div>
-                <img src={image} alt="shoe image" />
+                <img src={image} alt="shoe" />
                 <button type='button' onClick={() => {
                     dispatch(action2(id))
                    

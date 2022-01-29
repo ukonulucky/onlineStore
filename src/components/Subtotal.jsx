@@ -1,11 +1,12 @@
 import React from 'react'
- import { useSelector } from "react-redux" 
+import { useSelector } from "react-redux"
+import { useHistory } from "react-router-dom"
 import "../styles/Subtotal.css"
 import CurrencyFormat from "react-currency-format"
 function Subtitle() {
+    const history = useHistory()
     const basket = useSelector(state => state.basket)
      let   price = 0
-    
     let cost = () => {
         if (basket.length === 0) {
         return 0
@@ -39,7 +40,9 @@ function Subtitle() {
                 thousandSeperator={true}
                 prefix={"$"}
             /> 
-            <button className="button">Proceed to Checkout</button>
+            <button className="button" onClick={() => {
+                history.push("/delivery_details")
+            }}>Proceed to Checkout</button>
         </div>
     )
 }

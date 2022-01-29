@@ -1,24 +1,42 @@
-import React, { useState } from 'react';
+import React, { useState, useEfffect, useEffect } from 'react';
 import "../styles/Pagination.css"
+import { useHistory } from "react-router-dom"
 export default function Pagination() {
-  const pageArray  = ["/","/home_2","home_3"]
-let i = 1 
+  let [i,seti] = useState(0)
+  useEffect(() => {
+   handleRoutine()
+  })
+ const history = useHistory()
+  const handleRoutine = () => {
+  
+    if (i === 0) {
+      history.push("/")
+    } else if (i === 1) {
+      history.push("/home_2")
+    } else if ( i === 2) {
+      history.push("/home_3")
+    }
+   
+
+   }
+  
+ 
     return <div className="page">
       <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="disabled">
-      <a href={ pageArray[1 + i]} aria-label="Previous">
+            <button onClick={() => { seti(i--) } }  aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
-            </a>
-            
+            </button>
+          
     </li> 
-          <li class="active"><a href={ pageArray[0]} class="page-link" >1</a></li>
-          <li ><a href={ pageArray[1]} class="page-link" >2</a></li>
-          <li><a href={ pageArray[2]} class="page-link" >3</a></li>
+          <li class="active"><button onClick={() => { seti(0)} }   class="page-link" >1</button></li>
+          <li ><button onClick={() => { seti(1)} }   class="page-link" >2</button></li>
+          <li><button onClick={() => { seti(2)} }  class="page-link" >3</button></li>
     <li>
-      <a href={ pageArray[2-i]} aria-label="Next">
+      <button onClick={() => { seti(i++)} }  href={i} aria-label="Next">
          <span aria-hidden="true">&raquo;</span>
-      </a>
+      </button>
     </li>
   </ul>
 </nav>

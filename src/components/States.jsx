@@ -1,16 +1,16 @@
-import React, { useState } from 'react'
-
+import React from 'react'
+import "../styles/User_info.css";
 
 const States = ({ setloginData, loginData }) => {
   return (
-      <div>
+      <div className="state">
           <select id="inputState" name="form-control" onChange={(e) => {
               setloginData({
                   ...loginData,
                   state: e.target.value 
               })
           } } required  >
- <option value="">--Choose Country--</option>
+ <option value="">--State--</option>
    <option value="Afganistan">Afghanistan</option>
    <option value="Albania">Albania</option>
    <option value="Algeria">Algeria</option>

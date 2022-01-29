@@ -11,19 +11,18 @@ export const reducer = (state = initialState, action) => {
     switch (action.type) {
         case "ADD_TO_BASKET": return {
             ...state, basket: [...state.basket, action.item]
-        }
-            
-            break;
+        }  
+            // break;
         case "REMOVE_FROM_BASKET": return {
             ...state, basket: action.payload
         }
-            break;
+            // break;
             case "ASSIGN_USER": return {
                 ...state, user: action.payload
             }
-                break;
+                // break;
         default: return state
-            break;
+            // break;
     }
 }
 export const store = createStore(reducer)

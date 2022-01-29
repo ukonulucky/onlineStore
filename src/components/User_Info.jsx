@@ -1,5 +1,8 @@
 import React, { useState } from "react";
-// import logo from "../utils/images/logo.jpg";
+import logo from "../utils/images/paymentLogo.jpg";
+import logo2 from "../utils/images/payU.jpg";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { MutatingDots } from 'react-loader-spinner'
 import { useHistory} from "react-router-dom";
 import "../styles/User_info.css";
 import axios from "axios"
@@ -12,6 +15,7 @@ function Userinfo() {
     passWord: "",
     passWordConfirm: "",
   })
+  const [loader, setLoader] = useState(false)
   const history = useHistory()
   const [form_status, setForm_status] = useState({
     state: "",
@@ -20,7 +24,8 @@ function Userinfo() {
     try {   
 const res = await axios.post("http://localhost:5000/user_paymen")
       if (res.status === 201) {
-     const Timeout = setTimeout( () => {
+        const Timeout = setTimeout(() => {
+         setLoader(false)
           alert("Form Submission Successful")
      }, 5000);
         Timeout()
@@ -35,6 +40,8 @@ const res = await axios.post("http://localhost:5000/user_paymen")
   }
   const handleSubmit = (e) => {
     e.preventDefault();
+    setLoader(true)
+    
     if(
       loginData.cardName !== "" &&
       loginData.cardNumber !== "" &&
@@ -46,21 +53,28 @@ const res = await axios.post("http://localhost:5000/user_paymen")
     }
    
   }
-  return (
+  return (loader ? <div className="spiner">
+    <MutatingDots
+    heigth="100"
+    width="100"
+    color='green'
+    ariaLabel='loading'
+  />
+  </div>:(
     <div className="login_one_new">
       <div className="login_container">
-      <h1>Payment Method</h1>
-        {/* <div className="logo">
+      <h1>Payment Details</h1>
+        <div className="logo">
           <img src={logo} alt="amazone logo" />
-        </div> */}
+        </div>
         <form class="needs-validation" validate onSubmit={handleSubmit}>
           <div class="form-row">
             <div className="one">
-              <div class="col-md-8 mb-3">
+              <div class="col-md-10 mb-3 inputName">
                 <label for="validationTooltip01">Name On Card</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control name"
                   id="validationTooltip01"
                   placeholder="Enter Complete Name On the Card"
                   onChange={(e) => {
@@ -70,9 +84,9 @@ const res = await axios.post("http://localhost:5000/user_paymen")
                 />
               </div>
             </div>
-            <div className="one">
+            <div className="one cvv">
               <div class="col-md-6 mb-3">
-                <label for="validationTooltip01">Card NUmber</label>
+                <label for="validationTooltip01">Card Number</label>
                 <input
                   type=""
                   class="form-control"
@@ -87,7 +101,8 @@ const res = await axios.post("http://localhost:5000/user_paymen")
               <div class="col-md-5 mb-3">
                 <label for="validationTooltip02">CVV</label>
                 <input
-                  type="Number"
+                    type="Number"
+                   
                   class="form-control"
                   id="validationTooltip02"
                   placeholder="&#9679;&#9679;&#9679;"
@@ -105,7 +120,7 @@ const res = await axios.post("http://localhost:5000/user_paymen")
                 <label for="validationTooltip01">Expiration Date</label>
                 <input
                   type="text"
-                  class="form-control"
+                  class="form-control name"
                   id="validationTooltip01"
                   placeholder="MM/YY"
                   onChange={(e) => {
@@ -120,9 +135,14 @@ const res = await axios.post("http://localhost:5000/user_paymen")
             Submit
           </button>
           <div className="false">{ form_status.state}</div>
-        </form>
+          </form>
+          <div className="logo2">
+          <img src={logo2} alt="amazone logo" />
+          </div>
+          <small>PayU is secure payment provider for Superb-clothings.com</small>
       </div>
-    </div>
+      
+    </div>)
   );
 }
 

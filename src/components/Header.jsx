@@ -5,6 +5,7 @@ import ShoppingBasketIcon from '@mui/icons-material/ShoppingBasket';
 import SearchIcon from '@mui/icons-material/Search';
 import logo from "../utils/images/logo.jpg"
 import { Link } from "react-router-dom"
+
 function Header() {
     const basket = useSelector(state => state.basket)
     const user = useSelector(state => state.user)
@@ -20,7 +21,7 @@ function Header() {
         if(user !== ""){
             return "ACTIVE"
         } else {
-            return "SIGNIN"
+            return "BUY NOW"
        }
     }
     return (
@@ -29,7 +30,7 @@ function Header() {
             <img
                 className="header_logo"
                 src={ logo }
-                alt="amazone logo"
+                alt="logo"
             />
               </Link>
             <div className="header_search">
@@ -43,7 +44,8 @@ function Header() {
             </div>
             <div className="header_nav">
                 <div className="header_option">
-                    <Link to="/delivery_details" className="login">
+                    
+                    <Link to="/checkout" className="login">
                     <span className="header_optionLineOne">
                       { newUser() }
                     </span>
@@ -51,7 +53,7 @@ function Header() {
                             { SignIn_SignOut() }
                     </span>
                     </Link>
-                   
+    
                 </div>
                 <div className="header_option">
                 <span className="header_optionLineOne">

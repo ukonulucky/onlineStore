@@ -1,6 +1,7 @@
 import React from 'react'
 import {useDispatch } from "react-redux"
 import "../styles/Product.css"
+import Sizes from "./Sizes"
 import StarIcon from '@mui/icons-material/Star';
 function Product({ title, rating, price, description, image,comment, id }) {
     const dispatch = useDispatch()
@@ -23,7 +24,7 @@ function Product({ title, rating, price, description, image,comment, id }) {
         <div className="product">
             <div className="product_info" >
                 <p>{title}</p>
-                <p>{description}</p>
+                <Sizes />
                 <div className="amount">
                 <small>$</small>
                     <strong>{ price }</strong>
@@ -34,7 +35,7 @@ function Product({ title, rating, price, description, image,comment, id }) {
                      { return (<span key={ i } className="star"><StarIcon  /> </span>)})
                     }
                 </div>
-                <img src={image} alt="shoe image" />
+                <img src={image} alt="shoe" />
                 <button  type ='button' onClick={() => {
                     dispatch(addItem())
                 }} >{ comment }</button>

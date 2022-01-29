@@ -1,16 +1,15 @@
 import React from 'react'
-import { useSelector, useDispatch } from "react-redux"
+import { useSelector } from "react-redux"
 import "../styles/Checkout.css"
 import Subtotal from './Subtotal'
-import logo from "../utils/images/logo.jpg"
+import logo from "../utils/images/logo.svg"
 import Product2 from './Product2'
 
 
 function Checkout() {
     
     const basket = useSelector(state => state.basket)
-   
-    const dispatch = useDispatch()
+
     
     const basket2 = basket.length > 0 ? (
             basket.map((item, index) => {
