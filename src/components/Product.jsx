@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import {useDispatch } from "react-redux"
 import "../styles/Product.css"
 import Sizes from "./Sizes"
@@ -20,6 +20,7 @@ function Product({ title, rating, price, description, image,comment, id }) {
        }
     }
     
+    const [buttonState, setButtonState] = useState(false)
     return (
         <div className="product">
             <div className="product_info" >
@@ -36,7 +37,14 @@ function Product({ title, rating, price, description, image,comment, id }) {
                     }
                 </div>
                 <img src={image} alt="shoe" />
-                <button  type ='button' onClick={() => {
+                <button onClick={
+                    (e) => {
+                        
+                        console.log(e.target)
+                    }
+                }
+
+                    type ='button' onClick={() => {
                     dispatch(addItem())
                 }} >{ comment }</button>
             </div>

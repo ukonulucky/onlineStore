@@ -24,6 +24,9 @@
            flex: 1;
            align-items: center;
            border-radius:1rem;
+            @media screen and (max-width:760px) {
+                display:none;
+            }
            .header_searchInput{
                height: 2rem;
                padding: 10px;
@@ -49,9 +52,13 @@
           }
        }
        .header_nav{
+           margin-left: auto;
            display: flex;
            align-items: center;
            justify-content: space-evenly;
+           @media screen and (max-width:600px) {
+            margin-left:auto;
+        }
            .header_option:nth-child(3),.header_option:nth-child(2) {
             @media screen and (max-width:600px){
                 display: none;
@@ -69,6 +76,7 @@
             .header_optionLineTwo{
                 font-size: 1rem;
                 font-weight: 800;
+               
             }
             .login{ 
                 display: flex;
@@ -83,6 +91,12 @@
                 .header_optionLineTwo{
                     font-size: 1rem;
                     font-weight: 800;
+                    @media screen and (max-width:450px) {
+                        font-size:0.85rem;
+                        font-weight: bolder;
+                       
+                       
+                    }
                 }
             }
             

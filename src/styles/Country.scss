@@ -1,0 +1,22 @@
+.country{
+    display: flex;
+    margin-left: 0;
+    justify-content: start;
+    align-items: center;
+    padding-left: 0;
+    height: 2.3rem;
+    padding-top: 0px;
+    select{
+        display: block;
+        width: 70%;
+        height: 2.2rem;
+        border-color: purple ;
+        border-radius: 5px;
+        background-color: whitesmoke;
+        @media screen and (max-width: 860px) {
+            width: 100%;
+        }
+    }
+   
+
+}

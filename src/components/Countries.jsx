@@ -1,10 +1,10 @@
 import React from 'react'
 
-import "../styles/User_info.css";
+import "../styles/Country.css";
 const Countries = ({ setloginData, loginData }) => {
   return (
       <div className="country">
-          <select id="inputState" name="form-control" className="me-6" onChange={(e) => {
+          <select id="inputState" name="form-control"  onChange={(e) => {
               setloginData({
                   ...loginData,
                   country: e.target.value 

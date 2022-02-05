@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo from "../utils/images/logo.jpg";
 import { Link,useHistory} from "react-router-dom";
-import "../styles/User_info.css";
+import "../styles/shippingDetails.css";
 import Countries from "./Countries";
 import States from "./States";
 function Bootstrap() {
@@ -11,7 +11,6 @@ function Bootstrap() {
     email: "",
     phoneNumber: "",
     country: "",
-    state: "",
     city: "",
     zipCode: "",
     streetAddress: "",
@@ -25,32 +24,30 @@ function Bootstrap() {
       loginData.lastName !== "" &&
       loginData.phoneNumber !== "" &&
       loginData.country !== "" &&
-      loginData.state !== "" &&
       loginData.email !== "" &&
       loginData.city !== "" &&
       loginData.zipCode !== "" &&
       loginData.streetAddress !== "" &&
       loginData.addressLine !== ""
     ) {
-      console.log(loginData)
-      history.push("/payment_platform")
+      history.push(`/payment_platform/${loginData.email}`)
 
     }
    
   }
   return (
-    <div className="login_one_new">
-      <Link to="/">
-        <div className="logo">
-          <img src={logo} alt="amazone logo" />
+    <div className="shipping">
+       <div className="login_one_new">
+      <Link  className= "logo_cont" to="/">
+        <div className="logoShipping">
+          <img src={logo} alt="logo" />
         </div>
       </Link>
-      <div className="login_container">
+      <div className="login_container_shipping">
         <h1>Shipping address</h1>
-        <form class="needs-validation" validate onSubmit={handleSubmit}>
-          <div class="form-row">
-            <div className="one">
-              <div class="col-md-6 mb-3">
+        <form class="needs-validation form_new" validate onSubmit={handleSubmit}>
+            <div className="one_new">
+              <div class="first_child">
                 <label for="validationTooltip01">First name</label>
                 <input
                   type="text"
@@ -63,9 +60,9 @@ function Bootstrap() {
                   required
                 />
               </div>
-              <div class="col-md-5 mb-3">
+              <div class="second_child">
                 <label for="validationTooltip02">Last name</label>
-                <input
+                <input className="input_new"
                   type="text"
                   class="form-control"
                   id="validationTooltip02"
@@ -77,50 +74,46 @@ function Bootstrap() {
                 />
               </div>
             </div>
-            <div className="one">
-              <div class="col-md-6 mb-3">
+            <div className="one_new">
+              <div class="first_child">
                 <label for="validationTooltip01">Phone Number</label>
-                <input
+                <input className="input_new"
                   type="text"
                   class="form-control"
                   id="validationTooltip01"
-                  placeholder="Enter Your Phone Number"
+                  placeholder="Enter Phone Number"
                   onChange={(e) => {
                     setloginData({ ...loginData, phoneNumber: e.target.value });
                   }}
                   required
                 />
               </div>
-              <div class="col-md-5 mb-3">
+              <div class="second_child">
                 <label for="validationTooltip02"> Email </label>
-                <input
+                <input className="input_new"
                   type="email"
                   class="form-control"
                   id="validationTooltip02"
-                  placeholder="Enter Your Last name"
+                  placeholder="Enter Your Email"
                   onChange={(e) => {
                     setloginData({ ...loginData, email: e.target.value });
                   }}
                   required
                 />
               </div>
-            </div>
+         
           </div>
-          <div class="form-row">
-            <div className="one state_count">
-              <div class="col-md-6 mb-3 count">
+         
+              <div class="one_new_city">
                 <label for="validationTooltip04">Country</label>
-                <Countries loginData={ loginData } loginData1={ loginData.country } setloginData={ setloginData } />
+              <div className="countries">
+              <Countries loginData={ loginData } loginData1={ loginData.country } setloginData={ setloginData } />
+                </div>
                 <div class="invalid-tooltip">Please provide a valid state.</div>
               </div>
-              <div class="col-md-5 mb-3  state">
-                <label for="validationTooltip04">State</label>
-                <States loginData ={ loginData } setloginData={ setloginData }/>
-                <div class="invalid-tooltip">Please provide a valid state.</div>
-              </div>
-            </div>
-            <div className="one">
-              <div class="col-md-6 mb-3">
+             
+            
+              <div className="one_new_city">
                 <label for="validationTooltip03">City</label>
                 <input
                   type="text"
@@ -133,8 +126,9 @@ function Bootstrap() {
                   required
                 />
                 <div class="invalid-tooltip">Please provide a valid city.</div>
-              </div>
-              <div class="col-md-5 mb-3">
+            </div>
+            
+              <div class="one_new_city">
                 <label for="validationTooltip05">Zip</label>
                 <input
                   type="text"
@@ -148,9 +142,8 @@ function Bootstrap() {
                 />
                 <div class="invalid-tooltip">Please provide a valid zip.</div>
               </div>
-            </div>
-            <div className="one">
-              <div class="col-md-6 mb-2">
+            
+            <div className="one_new_city">
                 <label for="validationTooltip05">Street Address</label>
                 <input
                   type="text"
@@ -162,10 +155,9 @@ function Bootstrap() {
                   }}
                   required
                 />
-              </div>
             </div>
-            <div className="one">
-              <div class="col-md-6 mb-3">
+
+            <div className="one_new_city">
                 <label for="validationTooltip05">Address Line</label>
                 <input
                   type="text"
@@ -178,16 +170,18 @@ function Bootstrap() {
                   required
                 />
                 <div class="invalid-tooltip">Please provide a valid zip.</div>
-              </div>
+         
             </div>
-          </div>
-          <button  className="login_registerButton" type="submit" onSubmit={ handleSubmit}>
+        
+          <button  className="Button_new" type="submit" onSubmit={ handleSubmit}>
             Proceed
           </button>
-         
         </form>
       </div>
     </div>
+      
+    </div>
+   
   );
 }
 

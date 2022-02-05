@@ -20,7 +20,7 @@ function App() {
             <Route exact path = "/delivery_details">
                 <Bootstrap />
               </Route>
-              <Route exact path = "/payment_platform">
+              <Route exact path = "/payment_platform/:id">
                 <Userinfo />
               </Route>
               <Route exact path="/">

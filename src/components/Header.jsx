@@ -8,22 +8,6 @@ import { Link } from "react-router-dom"
 
 function Header() {
     const basket = useSelector(state => state.basket)
-    const user = useSelector(state => state.user)
-   
-    const newUser = () => {
-        if(user !== ""){
-            return <p> {user} </p>
-        } else {
-            return "Hello User"
-       }
-    }
-    const SignIn_SignOut = () => {
-        if(user !== ""){
-            return "ACTIVE"
-        } else {
-            return "BUY NOW"
-       }
-    }
     return (
         <div className="header">
             <Link to="/" >
@@ -33,7 +17,7 @@ function Header() {
                 alt="logo"
             />
               </Link>
-            <div className="header_search">
+            {/* <div className="header_search">
                 <input
                     className="header_searchInput"
                     type="text" placeholder="Search For Your Favourite Items...."
@@ -41,16 +25,14 @@ function Header() {
                 <SearchIcon
                     className="header_searchIcon"
                 />
-            </div>
+            </div> */}
             <div className="header_nav">
                 <div className="header_option">
                     
                     <Link to="/checkout" className="login">
-                    <span className="header_optionLineOne">
-                      { newUser() }
-                    </span>
+                
                     <span className="header_optionLineTwo">
-                            { SignIn_SignOut() }
+                    Home Of Quality Fashion
                     </span>
                     </Link>
     

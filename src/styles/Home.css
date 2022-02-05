@@ -58,4 +58,10 @@
             flex-direction: column;
   }
 }
+
+@media screen and (max-width: 760px) {
+  .header_search {
+    display: none;
+  }
+}
 /*# sourceMappingURL=Home.css.map */

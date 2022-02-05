@@ -3,33 +3,34 @@ import logo from "../utils/images/paymentLogo.jpg";
 import logo2 from "../utils/images/payU.jpg";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import { MutatingDots } from 'react-loader-spinner'
-import { useHistory} from "react-router-dom";
+import { useHistory, useParams} from "react-router-dom";
 import "../styles/User_info.css";
 import axios from "axios"
 function Userinfo() {
+  const { id } = useParams()
   const [loginData, setloginData] = useState({
     cardName: "",
     cardNumber: "",
     CVV: "",
     expireDate: "",
-    passWord: "",
-    passWordConfirm: "",
+    email:id
+    
   })
   const [loader, setLoader] = useState(false)
   const history = useHistory()
   const [form_status, setForm_status] = useState({
-    state: "",
+    state: ""
   })
+ 
   const post = async () => {
     try {   
-const res = await axios.post("http://localhost:5000/user_paymen")
+const res = await axios.post("http://localhost:5000/user_payment",loginData)
       if (res.status === 201) {
-        const Timeout = setTimeout(() => {
-         setLoader(false)
-          alert("Form Submission Successful")
-     }, 5000);
-        Timeout()
-      } else {
+       
+        history.push("/")
+        setLoader(false)
+        alert("Form Submission Successful")
+          
         setForm_status({state:"Form Submission Failed Please Retry"})
     }
     } catch (err) {
@@ -46,7 +47,6 @@ const res = await axios.post("http://localhost:5000/user_paymen")
       loginData.cardName !== "" &&
       loginData.cardNumber !== "" &&
       loginData.CVV !== "" &&
-
       loginData.expireDate !== "" 
     ) {
       post()
@@ -61,16 +61,16 @@ const res = await axios.post("http://localhost:5000/user_paymen")
     ariaLabel='loading'
   />
   </div>:(
-    <div className="login_one_new">
+    <div className="login_one">
       <div className="login_container">
       <h1>Payment Details</h1>
-        <div className="logo">
-          <img src={logo} alt="amazone logo" />
+        <div className="logo2">
+          <img src={logo} alt="logo" />
         </div>
         <form class="needs-validation" validate onSubmit={handleSubmit}>
-          <div class="form-row">
+        
             <div className="one">
-              <div class="col-md-10 mb-3 inputName">
+              <div class="one_first">
                 <label for="validationTooltip01">Name On Card</label>
                 <input
                   type="text"
@@ -84,12 +84,12 @@ const res = await axios.post("http://localhost:5000/user_paymen")
                 />
               </div>
             </div>
-            <div className="one cvv">
-              <div class="col-md-6 mb-3">
+            <div className="one ">
+              <div class="one_first cardNumber">
                 <label for="validationTooltip01">Card Number</label>
                 <input
-                  type=""
-                  class="form-control"
+                  type="Number"
+                  class="form-control cardNumber"
                   id="validationTooltip01"
                   placeholder="0000.0000.0000.0000"
                   onChange={(e) => {
@@ -98,11 +98,10 @@ const res = await axios.post("http://localhost:5000/user_paymen")
                   required
                 />
               </div>
-              <div class="col-md-5 mb-3">
+              <div class="one_second">
                 <label for="validationTooltip02">CVV</label>
                 <input
-                    type="Number"
-                   
+                  type="Number"
                   class="form-control"
                   id="validationTooltip02"
                   placeholder="&#9679;&#9679;&#9679;"
@@ -113,14 +112,13 @@ const res = await axios.post("http://localhost:5000/user_paymen")
                 />
               </div>
             </div>
-          </div>
-          <div class="form-row">
+     
             <div className="one">
-            <div class="col-md-6 mb-3">
+            <div class="one_first expire">
                 <label for="validationTooltip01">Expiration Date</label>
                 <input
                   type="text"
-                  class="form-control name"
+                  class="form-control expire"
                   id="validationTooltip01"
                   placeholder="MM/YY"
                   onChange={(e) => {
@@ -130,16 +128,15 @@ const res = await axios.post("http://localhost:5000/user_paymen")
                 />
               </div>
             </div>
-          </div>
           <button className="login_registerButton" type="submit" onSubmit={ handleSubmit}>
             Submit
           </button>
           <div className="false">{ form_status.state}</div>
           </form>
-          <div className="logo2">
+          <div className="logo3">
           <img src={logo2} alt="amazone logo" />
           </div>
-          <small>PayU is secure payment provider for Superb-clothings.com</small>
+          <small>PayU is the secure payment provider for Superb-clothings.com</small>
       </div>
       
     </div>)

@@ -1,10 +1,9 @@
 .checkout {
   width: 100%;
-  margin-bottom: 3.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  background-color: white;
+  background-color: #f2f2f2;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -17,12 +16,14 @@
   -webkit-box-flex: 1.9;
       -ms-flex: 1.9;
           flex: 1.9;
+  margin-right: 0.5rem;
 }
 
 .checkout .checkout_left {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
+  margin-left: 0.5rem;
 }
 
 .checkout .checkout_left .checkout_adv {

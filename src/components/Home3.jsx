@@ -18,7 +18,7 @@ function Home3() {
                 <Product id={ Math.random() } price={9.99} title="Basement Hoodie" description="A black pavolio shoe made from the very best of material" rating={3} image={kitchen} comment={ "Add To Basket"}  />
                 <Product id={ Math.random()  } price={5.89} title="Books Equal Happiness" description="A black pavolio shoe made from the very best of material" rating={3} image={furniture} comment={ "Add To Basket"}  />
                 <Product id={ Math.random()  }  price={4.99} title="Health is Wealth T-Shirt" description="A black pavolio shoe made from the very best of material" rating={3} image={fridge } comment={ "Add To Basket"} />
-                </div>
+            </div>
             <div className="home_row">
                 <Product id={ Math.random()  }  price={7.99} title="No Fluffs Given" description="A black pavolio shoe made from the very best of material" rating={4} image={ hair } comment={ "Add To Basket"}  />
                 <Product id={ Math.random()  }  price={6.89} title="Christian T-Shirt" description="A black pavolio shoe made from the very best of material" rating={5} image={ Tv } comment={ "Add To Basket"}  />

@@ -41,7 +41,13 @@ function Product2({ title, rating, price, description, image,comment, id }) {
                     }
                 </div>
                 <img src={image} alt="shoe" />
-                <button type='button' onClick={() => {
+                <button
+                    onClick={
+                        (e) => {
+                            console.log(e.target.disbled = true)
+                        }
+                    }
+                    type='button' onClick={() => {
                     dispatch(action2(id))
                    
                 }} >{ comment }</button>

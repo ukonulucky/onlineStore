@@ -30,12 +30,12 @@ function Subtitle() {
                             Subtotal ({ basket.length} items): <strong>{ value }</strong>
                         </p>
                         <small className="subtotal_gift">
-                            <input type="checkbox" /> This order contains a gift
+                            <input type="checkbox" /> This order contains a gift & a $3 shipping fee applies.
                         </small>
                     </>
                 )}
                 decimalScale={2}
-                value={costTotal}
+                value={costTotal + 3}
                 displayType={"text"}
                 thousandSeperator={true}
                 prefix={"$"}
