@@ -4,6 +4,16 @@
           flex: 1;
 }
 
+@media screen and (max-width: 400px) {
+  .product {
+    -webkit-box-shadow: 0 0 15px rgba(232, 146, 146, 0.5);
+            box-shadow: 0 0 15px rgba(232, 146, 146, 0.5);
+    border-radius: 10px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+  }
+}
+
 .product .product_info {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -49,11 +59,16 @@
 .product .product_info img {
   max-height: 15rem;
   min-height: 7rem;
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 15px;
   opacity: 1;
+}
+
+.product .product_info img:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  border-radius: 10px;
 }
 
 .product .product_info button {

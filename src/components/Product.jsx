@@ -45,14 +45,14 @@ function Product({ title, rating, price, description, image, id }) {
                 <small>$</small>
                     <strong>{ intValue > 0 ? (price * intValue).toFixed(2) : price }</strong>
                 </div>
-                <div className="product_rating">
+                <div className="product_rating shake-slow">
                     {
                      Array(rating).fill().map((_,i) =>
                      { return (<span key={ i } className="star"><StarIcon  /> </span>)})
                     }
                 </div>
                 <img src={image} alt="shoe" />
-                <button className="btn"
+                <button className="btn shake-slow"
                     type ='button' onClick={() => {
                         dispatch(addItem())
                         handleItem()
