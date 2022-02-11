@@ -13,4 +13,16 @@
   width: 100%;
   padding: 5rem;
 }
+
+@media screen and (max-width: 560px) {
+  .down_details img {
+    padding: 1rem;
+  }
+}
+
+@media screen and (max-width: 360px) {
+  .down_details img {
+    padding: 0.2rem;
+  }
+}
 /*# sourceMappingURL=Down_details.css.map */
