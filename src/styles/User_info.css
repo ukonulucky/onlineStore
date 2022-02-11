@@ -101,6 +101,8 @@
       -ms-flex-align: center;
           align-items: center;
   border: 3px solid grey;
+  -webkit-box-shadow: 0 0 40px rgba(232, 146, 146, 0.5);
+          box-shadow: 0 0 40px rgba(232, 146, 146, 0.5);
   border-radius: 5px;
   padding: 1.5rem;
   margin: 1.5rem;

@@ -115,6 +115,8 @@
   border: 3px solid grey;
   border-radius: 5px;
   padding: 2rem;
+  -webkit-box-shadow: 0 0 60px rgba(232, 146, 146, 0.5);
+          box-shadow: 0 0 60px rgba(232, 146, 146, 0.5);
 }
 
 .shipping .login_one_new .login_container_shipping .form_new .one_new_city {
