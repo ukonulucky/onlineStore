@@ -1,10 +1,42 @@
 .sizes {
+  margin-bottom: 0.3rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  border-radius: 3px;
+}
+
+.sizes .Qty {
+  display: block;
+  width: 10rem;
+  margin: 0 auto;
+  font-size: 0.8rem;
+  background-color: white;
+}
+
+.sizes .Qty label {
+  padding: 0.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.sizes .Qty label input {
+  width: 6rem;
+  border: 1px solid #cd9042;
+  padding: 0.3rem;
 }
 
 .sizes select {

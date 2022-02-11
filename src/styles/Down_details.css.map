@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,aAAa,CAAA;EACT,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,KAAK;EACb,KAAK,EAAE,IAAI;EACX,MAAM,EAAE,MAAM;EACd,UAAU,EAAE,IAAI;CAOnB;;AAZD,AAMI,aANS,CAMT,GAAG,CAAA;EACC,OAAO,EAAE,KAAK;EACd,MAAM,EAAE,IAAI;EACZ,KAAK,EAAE,IAAI;CACd",
+    "sources": [
+        "Down_details.scss"
+    ],
+    "names": [],
+    "file": "Down_details.css"
+}

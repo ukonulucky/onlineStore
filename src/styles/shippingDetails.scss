@@ -10,6 +10,9 @@
       margin:0 auto;
       margin-top: 2rem;
       margin-bottom: 2rem;
+      @media screen  and (max-width: 450px){
+        width: 96%;
+      }
   .logo_cont{
   display: flex;
   justify-content: center;
@@ -34,6 +37,10 @@
        .login_container_shipping{
         display: block;
          width: 80%;
+         margin: 0 auto;
+         @media screen  and (max-width: 400px){
+          width: 96%;
+        }
          margin: 0 auto;
         height: max-content;
         font-weight: bolder;
@@ -81,11 +88,15 @@
               border-radius: 5px;
               width: 70%;
               background-color: whitesmoke;
-           
-           
            @media screen and (max-width: 860px) {
              width: 100%;
            }
+           @media screen and (max-width: 400px) {
+            font-size: 0.5rem;
+            width: 90%;
+            font-size: 1rem !important;
+            padding: 0.2rem !important;
+          }
            }
 
           }
@@ -97,12 +108,22 @@
             margin-bottom: 0.8rem;
             @media screen and (max-width:760px) {
               flex-direction: column;
-              align-items: start;
-              justify-items: center;;
+              justify-items: center;
+              align-items: flex-start;
+              align-content: flex-start;
+              font: 0.8rem;
               .first_child{
                 margin-bottom: 2rem;
                 margin-right: auto;
                 margin-left: 0px;
+                .text{
+                  font-size: inherit;
+                  @media screen and (max-width:400px) {
+                  padding: 0.2rem !important;    
+                  font-size: 1rem !important;
+                  color: blue;
+                  }
+                }
               }
               .second_child{
                margin-right: auto;
@@ -119,6 +140,9 @@
               text-transform: capitalize;
               padding: 1rem 0;
               color: purple ;
+            @media screen and (max-width:400px){
+              font-size: 1rem;
+            }
             }
             input{
               height: 2.2rem;
@@ -137,19 +161,22 @@
               text-transform: capitalize;
               padding: 1rem 0;
               color:purple ;
+              @media screen and (max-width:400px){
+                font-size: 1rem;
+              }
             }
             input{
-           
               height: 2.2rem;
               border-color: purple ;
               border-radius: 5px;
               background-color: whitesmoke;
+              @media screen and (max-width:400px){
+                font-size: 1rem;
+              }
             }
           }
 
-          }
-         
-          
+          }    
           .Button_new{
         background-color: #f0c14b;
         border-radius: 2px;
@@ -168,5 +195,11 @@
           }
         }
        }
+  }
+}
+.form-control{
+  @media  screen and (max-width:400px) {
+  padding: 0.2rem !important;    
+  font-size: 1rem !important;
   }
 }

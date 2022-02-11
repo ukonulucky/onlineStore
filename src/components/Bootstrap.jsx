@@ -45,13 +45,13 @@ function Bootstrap() {
       </Link>
       <div className="login_container_shipping">
         <h1>Shipping address</h1>
-        <form class="needs-validation form_new" validate onSubmit={handleSubmit}>
+        <form className="needs-validation form_new" validate onSubmit={handleSubmit}>
             <div className="one_new">
-              <div class="first_child">
+              <div className="first_child">
                 <label for="validationTooltip01">First name</label>
                 <input
                   type="text"
-                  class="form-control"
+                  className="form-control text"
                   id="validationTooltip01"
                   placeholder="Enter Your First Name"
                   onChange={(e) => {
@@ -60,11 +60,11 @@ function Bootstrap() {
                   required
                 />
               </div>
-              <div class="second_child">
+              <div className="second_child">
                 <label for="validationTooltip02">Last name</label>
                 <input className="input_new"
                   type="text"
-                  class="form-control"
+                  className="form-control text"
                   id="validationTooltip02"
                   placeholder="Enter Your Last name"
                   onChange={(e) => {
@@ -77,9 +77,9 @@ function Bootstrap() {
             <div className="one_new">
               <div class="first_child">
                 <label for="validationTooltip01">Phone Number</label>
-                <input className="input_new"
+                <input className="input_new text"
                   type="text"
-                  class="form-control"
+                  className="form-control"
                   id="validationTooltip01"
                   placeholder="Enter Phone Number"
                   onChange={(e) => {
@@ -90,7 +90,7 @@ function Bootstrap() {
               </div>
               <div class="second_child">
                 <label for="validationTooltip02"> Email </label>
-                <input className="input_new"
+                <input className="input_new text"
                   type="email"
                   class="form-control"
                   id="validationTooltip02"

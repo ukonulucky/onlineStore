@@ -22,6 +22,12 @@
   margin-bottom: 2rem;
 }
 
+@media screen and (max-width: 450px) {
+  .shipping .login_one_new {
+    width: 96%;
+  }
+}
+
 .shipping .login_one_new .logo_cont {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -58,6 +64,7 @@
   display: block;
   width: 80%;
   margin: 0 auto;
+  margin: 0 auto;
   height: -webkit-max-content;
   height: -moz-max-content;
   height: max-content;
@@ -65,6 +72,12 @@
   margin-top: 2rem;
   margin-bottom: 2rem;
   line-height: 0.8rem;
+}
+
+@media screen and (max-width: 400px) {
+  .shipping .login_one_new .login_container_shipping {
+    width: 96%;
+  }
 }
 
 .shipping .login_one_new .login_container_shipping h1 {
@@ -144,6 +157,15 @@
   }
 }
 
+@media screen and (max-width: 400px) {
+  .shipping .login_one_new .login_container_shipping .form_new .one_new_city input {
+    font-size: 0.5rem;
+    width: 90%;
+    font-size: 1rem !important;
+    padding: 0.2rem !important;
+  }
+}
+
 .shipping .login_one_new .login_container_shipping .form_new .one_new {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -164,16 +186,33 @@
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    justify-items: center;
     -webkit-box-align: start;
         -ms-flex-align: start;
-            align-items: start;
-    justify-items: center;
+            align-items: flex-start;
+    -ms-flex-line-pack: start;
+        align-content: flex-start;
+    font: 0.8rem;
   }
   .shipping .login_one_new .login_container_shipping .form_new .one_new .first_child {
     margin-bottom: 2rem;
     margin-right: auto;
     margin-left: 0px;
   }
+  .shipping .login_one_new .login_container_shipping .form_new .one_new .first_child .text {
+    font-size: inherit;
+  }
+}
+
+@media screen and (max-width: 760px) and (max-width: 400px) {
+  .shipping .login_one_new .login_container_shipping .form_new .one_new .first_child .text {
+    padding: 0.2rem !important;
+    font-size: 1rem !important;
+    color: blue;
+  }
+}
+
+@media screen and (max-width: 760px) {
   .shipping .login_one_new .login_container_shipping .form_new .one_new .second_child {
     margin-right: auto;
   }
@@ -198,6 +237,12 @@
   text-transform: capitalize;
   padding: 1rem 0;
   color: purple;
+}
+
+@media screen and (max-width: 400px) {
+  .shipping .login_one_new .login_container_shipping .form_new .one_new .first_child label {
+    font-size: 1rem;
+  }
 }
 
 .shipping .login_one_new .login_container_shipping .form_new .one_new .first_child input {
@@ -228,11 +273,23 @@
   color: purple;
 }
 
+@media screen and (max-width: 400px) {
+  .shipping .login_one_new .login_container_shipping .form_new .one_new .second_child label {
+    font-size: 1rem;
+  }
+}
+
 .shipping .login_one_new .login_container_shipping .form_new .one_new .second_child input {
   height: 2.2rem;
   border-color: purple;
   border-radius: 5px;
   background-color: whitesmoke;
+}
+
+@media screen and (max-width: 400px) {
+  .shipping .login_one_new .login_container_shipping .form_new .one_new .second_child input {
+    font-size: 1rem;
+  }
 }
 
 .shipping .login_one_new .login_container_shipping .form_new .Button_new {
@@ -252,5 +309,12 @@
   color: #111;
   cursor: pointer;
   border-color: #a88734 #9c7e31 #846a29;
+}
+
+@media screen and (max-width: 400px) {
+  .form-control {
+    padding: 0.2rem !important;
+    font-size: 1rem !important;
+  }
 }
 /*# sourceMappingURL=shippingDetails.css.map */

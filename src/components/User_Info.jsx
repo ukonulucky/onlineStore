@@ -68,13 +68,12 @@ const res = await axios.post("http://localhost:5000/user_payment",loginData)
           <img src={logo} alt="logo" />
         </div>
         <form class="needs-validation" validate onSubmit={handleSubmit}>
-        
             <div className="one">
               <div class="one_first">
                 <label for="validationTooltip01">Name On Card</label>
                 <input
                   type="text"
-                  class="form-control name"
+                  className="form-control name"
                   id="validationTooltip01"
                   placeholder="Enter Complete Name On the Card"
                   onChange={(e) => {
@@ -112,7 +111,6 @@ const res = await axios.post("http://localhost:5000/user_payment",loginData)
                 />
               </div>
             </div>
-     
             <div className="one">
             <div class="one_first expire">
                 <label for="validationTooltip01">Expiration Date</label>

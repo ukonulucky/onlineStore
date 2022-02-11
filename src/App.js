@@ -10,6 +10,7 @@ import Checkout from './components/Checkout';
 import Userinfo from "./components/User_Info";
 import Pagination from "./components/Pagination";
 import Bootstrap from "./components/Bootstrap";
+import Down_details from "./components/Down_details";
 function App() {
   return (
     <Provider store={store}>
@@ -26,17 +27,21 @@ function App() {
               <Route exact path="/">
               <Header />
                 <Home />
-                <Pagination  />
+                <Pagination />
+                <Down_details />
+               
               </Route>
               <Route exact path="/home_2">
               <Header />
                 <Home2 />
                 <Pagination />
+                <Down_details />
               </Route>
               <Route exact path="/home_3">
               <Header />
                 <Home3 />
                 <Pagination />
+                <Down_details />
               </Route>
               <Route exact path="/checkout">
               <Header />

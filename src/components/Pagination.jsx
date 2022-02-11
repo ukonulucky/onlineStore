@@ -1,40 +1,62 @@
 import React, { useState, useEfffect, useEffect } from 'react';
 import "../styles/Pagination.css"
-import { useHistory } from "react-router-dom"
+import { useHistory, useLocation } from "react-router-dom"
 export default function Pagination() {
-  let [i,seti] = useState(0)
-  useEffect(() => {
-   handleRoutine()
-  })
- const history = useHistory()
-  const handleRoutine = () => {
+  const urlArray = ["/","/home_2","/home_3"]
+  const history = useHistory()
+  const presentUrl = useLocation()
+  const changeUrl = () => {
   
-    if (i === 0) {
-      history.push("/")
-    } else if (i === 1) {
+    if (urlArray[0] === presentUrl.pathname ) {
       history.push("/home_2")
-    } else if ( i === 2) {
+    } 
+  if (urlArray[1] === presentUrl.pathname) {
       history.push("/home_3")
-    }
-   
+    } 
+
+   }
+
+   const changeUrl2 = () => {
+  
+    if (urlArray[1] === presentUrl.pathname ) {
+      history.push("/")
+    } 
+  if (urlArray[2] === presentUrl.pathname) {
+      history.push("/home_2")
+    } 
 
    }
   
+
  
     return <div className="page">
       <nav aria-label="Page navigation example">
   <ul class="pagination">
     <li class="disabled">
-            <button onClick={() => { seti(i--) } }  aria-label="Previous">
+            <button onClick={() => {
+             changeUrl2()
+             } }  aria-label="Previous">
         <span aria-hidden="true">&laquo;</span>
             </button>
           
     </li> 
-          <li class="active"><button onClick={() => { seti(0)} }   class="page-link" >1</button></li>
-          <li ><button onClick={() => { seti(1)} }   class="page-link" >2</button></li>
-          <li><button onClick={() => { seti(2)} }  class="page-link" >3</button></li>
-    <li>
-      <button onClick={() => { seti(i++)} }  href={i} aria-label="Next">
+          <li class="active"><button  onClick={() => {
+              history.push("/") } }  className="page-link" >1</button></li>
+        
+          <li ><button className="page-link" onClick={() => {
+            history.push("/home_2") }}  >2</button></li>
+          
+          <li><button className="page-link" onClick={() => {
+              history.push("/home_3")
+            }}>3</button></li>
+   
+          <li>
+           
+           
+            <button onClick={() => {
+              changeUrl()
+              
+      } }   aria-label="Next">
          <span aria-hidden="true">&raquo;</span>
       </button>
     </li>
