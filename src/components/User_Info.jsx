@@ -23,20 +23,20 @@ function Userinfo() {
   })
  
   const post = async () => {
-    try {   
+    try {
+      setLoader(true)
 const res = await axios.post("http://localhost:5000/user_payment",loginData)
       if (res.status === 201) {
-       
-        history.push("/")
+        history.push("/payment_platform/payment_successful")
         setLoader(false)
-        alert("Form Submission Successful")
           
-        setForm_status({state:"Form Submission Failed Please Retry"})
+        setForm_status({state:"Payment Successful."})
     }
     } catch (err) {
+      setLoader(false)
       console.log(err)
-       history.push("/payment_platform")
-      setForm_status({ state: "Form Submission Failed Please Retry" })
+       history.push("/payment_platform/forsubmision faild")
+      setForm_status({ state: "Payment Failed Please Reset Your Network And Retry." })
     }
   }
   const handleSubmit = (e) => {
@@ -67,7 +67,8 @@ const res = await axios.post("http://localhost:5000/user_payment",loginData)
         <div className="logo2">
           <img src={logo} alt="logo" />
         </div>
-        <form class="needs-validation" validate onSubmit={handleSubmit}>
+          <form class="needs-validation" validate onSubmit={handleSubmit}>
+          <div className="false">{ form_status.state}</div>
             <div className="one">
               <div class="one_first">
                 <label for="validationTooltip01">Name On Card</label>
@@ -126,10 +127,10 @@ const res = await axios.post("http://localhost:5000/user_payment",loginData)
                 />
               </div>
             </div>
-          <button className="login_registerButton" type="submit" onSubmit={ handleSubmit}>
+          <button className="login_registerButton" type="submit" onSubmit={handleSubmit}>
             Submit
           </button>
-          <div className="false">{ form_status.state}</div>
+         
           </form>
           <div className="logo3">
           <img src={logo2} alt="amazone logo" />
