@@ -1,5 +1,4 @@
 .checkout {
-  width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -19,11 +18,27 @@
   margin-right: 0.5rem;
 }
 
+@media screen and (max-width: 420px) {
+  .checkout .checkout_right {
+    -webkit-box-flex: 2;
+        -ms-flex: 2;
+            flex: 2;
+  }
+}
+
 .checkout .checkout_left {
   -webkit-box-flex: 3;
       -ms-flex: 3;
           flex: 3;
   margin-left: 0.5rem;
+}
+
+@media screen and (max-width: 420px) {
+  .checkout .checkout_left {
+    -webkit-box-flex: 2.5;
+        -ms-flex: 2.5;
+            flex: 2.5;
+  }
 }
 
 .checkout .checkout_left .checkout_adv {

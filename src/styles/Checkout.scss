@@ -1,5 +1,4 @@
 .checkout {
-  width: 100%;
   display: flex;
   background-color:#f2f2f2;
   height: max-content;
@@ -7,10 +6,17 @@
     display: flex;
     flex: 1.9;
     margin-right: 0.5rem;
+    @media  screen and (max-width:420px) {
+      flex: 2
+    }
+
   }
   .checkout_left {
     flex: 3;
     margin-left: 0.5rem;
+    @media  screen and (max-width:420px) {
+      flex: 2.5
+    }
 
     .checkout_adv {
       width: 100%;
