@@ -146,6 +146,10 @@
   font-weight: 800;
 }
 
+.header .header_nav .header_option .login .header_optionLineTwo:hover {
+  color: #e8b777;
+}
+
 @media screen and (max-width: 450px) {
   .header .header_nav .header_option .login .header_optionLineTwo {
     font-size: 0.85rem;
@@ -163,8 +167,30 @@
   color: white;
 }
 
+.header .header_nav .header_optionBasket:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  color: #e8b777;
+}
+
 .header .header_nav .header_optionBasket .header_basketCount {
   margin-left: 0.4rem;
   margin-right: 1rem;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+a:hover {
+  color: #e8b777;
 }
 /*# sourceMappingURL=Header.css.map */

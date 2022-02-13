@@ -1,22 +1,33 @@
-import React, { useState } from 'react'
+import React, { useState, useEffect } from 'react'
 import {useDispatch } from "react-redux"
 import "../styles/Product.css"
 import Sizes from "./Sizes"
 import Quantity from "./Quantity"
 import StarIcon from '@mui/icons-material/Star';
 function Product({ title, rating, price, description, image, id }) {
+    
+const [button,setButton ] = useState({
+        value:false
+    })
    
     const [item, setItem] = useState({
         unClick: "Add To Basket",
     })
+
     const handleItem = () => {
         setItem({
         unClick:"Item Added"
     })
-   }
+    }
+  
+    const handleButton = () => {
+        setButton({
+            value : true
+        })
+    }
    
     const [Qty, setQty] = useState(1)
-    const intValue = Math.abs(parseInt(Qty,10))
+    const intValue = (parseInt(Qty,10)).toFixed(2)
     const dispatch = useDispatch()
      const addItem = () => {
         return {
@@ -25,7 +36,7 @@ function Product({ title, rating, price, description, image, id }) {
             title: title,
             id: id,
             rating: rating,
-            price: parseInt(price * intValue,10) ,
+            price: intValue > 0 ? (price * intValue).toFixed(2) : price,
             description: description,
             image: image
            
@@ -34,7 +45,6 @@ function Product({ title, rating, price, description, image, id }) {
     }
     
 
-    const [buttonState, setButtonState] = useState(false)
     return (
         <div className="product">
             <div className="product_info" >
@@ -53,10 +63,11 @@ function Product({ title, rating, price, description, image, id }) {
                 </div>
                 <img src={image} alt="shoe" />
                 <button className="btn shake-slow"
-                    type ='button' onClick={() => {
+                    type='button' onClick={() => {
                         dispatch(addItem())
                         handleItem()
-                }} >{ item.unClick }</button>
+                        handleButton()
+                    } }   disabled={ button.value }  >{ item.unClick }</button>
             </div>
             
             

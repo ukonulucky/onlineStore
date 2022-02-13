@@ -38,19 +38,30 @@ function Header() {
     
                 </div>
                 <div className="header_option">
-                <span className="header_optionLineOne">
-                        Returns
+              
+                   
+                    <span className="header_optionLineOne">
+                       
+                    <a href="https://www.shein.com/" target="_blank">  Fashion   </a>
                     </span>
                     <span className="header_optionLineTwo">
-                      & Orders 
-                    </span>  
+                    <a href="https://www.shein.com/" target="_blank">   & Zones   </a>
+                    </span>
+                  
                 </div>
                 <div className="header_option">
                 <span className="header_optionLineOne">
-                        Your
+                        <a href="https://fashionschooldaily.com/" target="_blank" >
+                        News
+                    </a>
+                      
                     </span>
                     <span className="header_optionLineTwo">
-                      Prime  
+                    <a href="https://fashionschooldaily.com/" target="_blank" >
+                    & Trends 
+                    </a>
+                      
+                     
                     </span>  
                 </div>
                 <div className="header_optionBasket">
