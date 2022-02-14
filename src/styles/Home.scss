@@ -29,7 +29,12 @@
             flex-direction: column;
 
         }
+
+        @media screen and (max-width:460px){
+           padding: 1.5rem;
+
+        }
     }
-}
+
 
 }

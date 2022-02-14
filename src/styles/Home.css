@@ -59,9 +59,9 @@
   }
 }
 
-@media screen and (max-width: 760px) {
-  .header_search {
-    display: none;
+@media screen and (max-width: 460px) {
+  .home .home_row {
+    padding: 1.5rem;
   }
 }
 /*# sourceMappingURL=Home.css.map */

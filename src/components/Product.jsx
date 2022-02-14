@@ -24,7 +24,7 @@ const [button,setButton ] = useState({
         setButton({
             value : true
         })
-        console.log(price * intValue)
+     
     }
    
     const [Qty, setQty] = useState(1)
