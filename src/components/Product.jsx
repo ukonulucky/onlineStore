@@ -24,6 +24,7 @@ const [button,setButton ] = useState({
         setButton({
             value : true
         })
+        console.log(price * intValue)
     }
    
     const [Qty, setQty] = useState(1)
@@ -36,14 +37,23 @@ const [button,setButton ] = useState({
             title: title,
             id: id,
             rating: rating,
-            price: intValue > 0 ? (price * intValue).toFixed(2) : price,
+            price: result,
             description: description,
             image: image
            
         }
-       }
+        }
+         
     }
-    
+   const handleTotal = (intValue = 1) => {
+       if (intValue > 0 ) {
+     return    (price * intValue).toFixed(2)  
+       }
+       else {
+           return price
+      }
+    }
+  const result = handleTotal(Qty)
 
     return (
         <div className="product">
@@ -53,7 +63,7 @@ const [button,setButton ] = useState({
                 <Quantity setQty = {setQty } Qty={ Qty }/>
                 <div className="amount">
                 <small>$</small>
-                    <strong>{ intValue > 0 ? (price * intValue).toFixed(2) : price }</strong>
+                    <strong>{ handleTotal(Qty) }</strong>
                 </div>
                 <div className="product_rating shake-slow">
                     {

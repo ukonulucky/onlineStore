@@ -11,14 +11,17 @@ function Subtitle() {
         if (basket.length === 0) {
         return 0
         } else {
-           const totalPrice = basket?.map(item => {
-                return price = price + item.price
+            const totalPrice = basket?.map(item => {
+              
+                return price = (price + parseFloat(item.price))
+
             })
             return totalPrice[totalPrice.length -1]
     }
     }
        
     const costTotal = cost()
+   
   
       
     return (
