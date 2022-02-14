@@ -25,12 +25,12 @@ function Userinfo() {
   const post = async () => {
     try {
       setLoader(true)
-const res = await axios.post("http://localhost:5000/user_payment",loginData)
+const res = await axios.post("https://shop1--store.herokuapp.com/user_payment",loginData)
       if (res.status === 201) {
         history.push("/payment_platform/payment_successful")
         setLoader(false)
           
-        setForm_status({state:"Payment Successful."})
+        setForm_status({state:"Payment Successful"})
     }
     } catch (err) {
       setLoader(false)
